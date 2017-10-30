@@ -1,11 +1,11 @@
-var algo = require('./index.js');
+var algo = require('./index.js').default;
 
 var test1 = ['a', 'b', 'b', 'b'];
 var result1 = algo(test1);
 console.assert(result1.hasMajority === true && result1.majorityChar === 'b');
 
 var test2 = ['a', 'b', 'c', 'd'];
-var result2 = algo(test1);
+var result2 = algo(test2);
 console.assert(result2.hasMajority === false);
 
 var test3 = [];
@@ -23,3 +23,7 @@ console.assert(result5.hasMajority === true && result5.majorityChar === 'a');
 var test6 = ['a', 'a', 'a', 'a', 'a', 'a', 'f', 'f', 'f', 'f'];
 var result6 = algo(test6);
 console.assert(result6.hasMajority === true && result5.majorityChar === 'a');
+
+var test7 = ['a', 'b', 'b', 'a'];
+var result7 = algo(test7);
+console.assert(result7.hasMajority === false);
